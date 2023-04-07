@@ -7,13 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest",
+    "test:watch": "yarn test --watch"
   },
-    "lint-staged": {
-      "src/**/*": [
-        "yarn lint --fix"
-      ]
-    },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix", "yarn test --bail"
+    ]
+  },
   "dependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
@@ -26,13 +33,19 @@
     "typescript": "5.0.3"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.21.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^6.0.0-alpha.120",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^13.2.1",
     "prettier": "2.8.7"
   }
