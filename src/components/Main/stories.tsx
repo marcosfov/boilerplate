@@ -15,7 +15,7 @@ export const Basic: Story = {
   render: (args) => <Main {...args} />
 }
 Basic.args = {
-  title: 'asijdfioajsdifj',
+  title: 'asijdfioajsdifjas',
   description: 'asdhfoiasho'
 }
 
