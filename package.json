@@ -21,7 +21,7 @@
   "lint-staged": {
     "src/**/*": [
       "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "yarn test --passWithNoTests --bail"
     ]
   },
   "dependencies": {
@@ -40,7 +40,6 @@
     "@babel/preset-typescript": "^7.21.4",
     "@storybook/addon-essentials": "7.0.2",
     "@storybook/addon-interactions": "7.0.2",
-    "@storybook/addon-knobs": "^7.0.0",
     "@storybook/addon-links": "7.0.2",
     "@storybook/blocks": "7.0.2",
     "@storybook/nextjs": "7.0.2",
