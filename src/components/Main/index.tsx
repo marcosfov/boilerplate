@@ -1,5 +1,7 @@
 import * as S from './styles'
 
+const foo = 'bar'
+
 export default function Main({
   title = 'React Avançado',
   description = 'TypeScript, ReactJS, NextJS e Styled Components'
