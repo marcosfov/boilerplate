@@ -11,6 +11,7 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "storybook": "storybook dev -p 6006",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
     "build-storybook": "storybook build",
     "cross-env": "cross-env NODE_ENV=production yarn build",
     "server": "http-server"
@@ -62,6 +63,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "jest-styled-components": "^7.1.1",
     "lint-staged": "^13.2.1",
+    "plop": "^3.1.2",
     "prettier": "2.8.7",
     "storybook": "7.0.2"
   }
